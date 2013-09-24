@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/detail_background3" >
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+	        <EditText
+	            android:id="@+id/et_login_username"
+	            android:layout_width="300dp"
+	            android:layout_height="40dp"
+	            android:hint="用户名" >
+
+	            <requestFocus />
+	        </EditText>
+	
+	        <EditText
+	            android:id="@+id/et_login_password"
+	            android:layout_width="300dp"
+	            android:layout_height="40dp"
+	            android:hint="密码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/ll_input"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp" >
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="135dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_back"
+            android:text="注册"
+            android:textColor="#555555" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="135dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_back3"
+            android:text="登录"
+            android:textColor="#555555" />
+
+    </LinearLayout>
+</RelativeLayout>

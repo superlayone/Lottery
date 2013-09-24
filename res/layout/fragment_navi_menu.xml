@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/navi"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_navi_1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/navi_back1"
+        android:paddingTop="0dp"
+        android:text="彩票资讯"
+        android:textColor="#555555" />
+
+    <Button
+        android:id="@+id/btn_navi_2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btn_navi_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/navi_back2"
+        android:text="购彩大厅"
+        android:textColor="#555555" />
+
+    <Button
+        android:id="@+id/btn_navi_3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btn_navi_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/navi_back3"
+        android:text="开奖信息"
+        android:textColor="#555555" />
+
+    <Button
+        android:id="@+id/btn_navi_4"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btn_navi_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/navi_back4"
+        android:text="我的彩票"
+        android:textColor="#555555" />
+
+</RelativeLayout>
