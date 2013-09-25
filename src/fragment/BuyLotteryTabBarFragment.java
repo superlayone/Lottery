@@ -1,7 +1,8 @@
 /*
  * Some rights reserved!
- * Author : Layone
- * Mail to superlayone@gmail.com
+ * Author 	: 	Layone
+ * Date 	: 	2013-09
+ * Mail 	: 	superlayone@gmail.com
  */
 package fragment;
 

@@ -1,8 +1,9 @@
 /*
  * Some rights reserved!
  * Guide page for displaying key features!
- * Author : Layone
- * Mail to superlayone@gmail.com
+ * Author 	: 	Layone
+ * Date 	: 	2013-09
+ * Mail 	: 	superlayone@gmail.com
  */
 package common;
 

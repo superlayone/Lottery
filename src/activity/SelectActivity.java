@@ -1,18 +1,15 @@
 /*
  * Some rights reserved!
- * Author : Layone
- * Mail to superlayone@gmail.com
+ * Author 	: 	Layone
+ * Date 	: 	2013-09
+ * Mail 	: 	superlayone@gmail.com
  */
 package activity;
 
 import com.example.lottery.R;
-import common.Global;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MotionEvent;
@@ -58,17 +55,12 @@ public class SelectActivity extends Activity{
 	    	if(e.getX() <= 100 && e.getY() <= 100){
 	    		/*
 	    		 * Match  if condition
-	    		 * change the default value to newest ones
+	    		 * go to change settings page
 	    		 */
 	    		//System.out.println("Double touched");
-	    		SharedPreferences preferences = getSharedPreferences(  
-	                    Global.GLOBALSETTINGS, MODE_PRIVATE);
-	    		Editor editor = preferences.edit(); 
-	        	editor.putString(Global.PREFERENCE_GATEWAY, "192.168.1.1"); 
-	        	editor.commit(); 
-	        	System.out.println("In PREFERENCE_GATEWAY changed!New is :"+
-	        	preferences.getString(Global.PREFERENCE_GATEWAY, "none"));
-	        	
+	    		Intent intent = new Intent();
+				intent.setClass(SelectActivity.this, ChangeSettingActivity.class);
+				SelectActivity.this.startActivity(intent);    	
 	    	}
 	        return false;
 	    }

@@ -1,7 +1,8 @@
 /*
  * Some rights reserved!
- * Author : Layone
- * Mail to superlayone@gmail.com
+ * Author 	: 	Layone
+ * Date 	: 	2013-09
+ * Mail 	: 	superlayone@gmail.com
  */
 package activity;
 
@@ -87,7 +88,7 @@ public class WelcomeActivity extends Activity {
         preferences = getSharedPreferences(Global.GLOBALSETTINGS,MODE_PRIVATE);
         if(preferences.getString(Global.PREFERENCE_GATEWAY, "none") == "none"){
         	Editor editor = preferences.edit(); 
-        	editor.putString(Global.PREFERENCE_GATEWAY, Global.defaultGateway); 
+        	editor.putString(Global.PREFERENCE_GATEWAY,  Global.defaultGateway); 
         	editor.commit(); 
         }
         if(preferences.getString(Global.PREFERENCE_PLATFORM_IP, "none") == "none"){
