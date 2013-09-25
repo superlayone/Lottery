@@ -1,3 +1,8 @@
+/*
+ * Some rights reserved!
+ * Author : Layone
+ * Mail to superlayone@gmail.com
+ */
 package com.example.lottery;
 
 import android.os.Bundle;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@+drawable/view_page_4"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingBottom="100dp">
+    android:background="@drawable/view_page_back4"
+    android:paddingBottom="100dp" >
 
     <Button
         android:id="@+id/btn_close_guide"
@@ -13,7 +13,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/button_back2"
         android:text="@string/guide_go" />
 
 </RelativeLayout>

@@ -1,3 +1,9 @@
+/*
+ * Some rights reserved!
+ * Guide page for displaying key features!
+ * Author : Layone
+ * Mail to superlayone@gmail.com
+ */
 package com.example.lottery;
 
 import java.util.ArrayList;
@@ -25,7 +31,7 @@ public class GuideActivity extends Activity {
     //Dots
     private ImageView[] imageViews;
      
-    //Pic LinearLayout
+    //Pictures LinearLayout
     private ViewGroup viewPics;
 
     private ViewGroup viewPoints;
@@ -34,7 +40,9 @@ public class GuideActivity extends Activity {
         super.onCreate(savedInstanceState);
         LayoutInflater inflater = getLayoutInflater();
         pageViews = new ArrayList<View>();
-        
+        /*
+         * Inflater view from layout file 
+         */
         pageViews.add(inflater.inflate(R.layout.guide_page1, null));
         pageViews.add(inflater.inflate(R.layout.guide_page2, null));
         pageViews.add(inflater.inflate(R.layout.guide_page3, null));
@@ -69,15 +77,17 @@ public class GuideActivity extends Activity {
      
     private Button.OnClickListener  Button_OnClickListener = new Button.OnClickListener() {
         public void onClick(View v) {
+        	//isFirstIn set to false
             setGuided();
-            
+            //Go to select page
             Intent mIntent = new Intent();
             mIntent.setClass(GuideActivity.this, SelectActivity.class);
             GuideActivity.this.startActivity(mIntent);
+            //Destroy GuideActivity
             GuideActivity.this.finish();
         }
     }; 
-     
+    //Change status 
     private static final String SHAREDPREFERENCES_NAME = "first_pref";
     private void setGuided(){
     	SharedPreferences preferences = getSharedPreferences(SHAREDPREFERENCES_NAME, 0);

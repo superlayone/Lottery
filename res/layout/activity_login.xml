@@ -3,12 +3,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/detail_background3" >
 
+	<RelativeLayout
+	    android:layout_width="320dp"
+	    android:layout_height="320dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="false"
+	    android:layout_marginTop="300dp"
+	    android:background="@drawable/login_frame2" >
+
         <LinearLayout
             android:id="@+id/ll_input"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:gravity="center_vertical"
             android:orientation="vertical" >
 
@@ -16,7 +23,7 @@
 	            android:id="@+id/et_login_username"
 	            android:layout_width="300dp"
 	            android:layout_height="40dp"
-	            android:hint="用户名" >
+	            android:hint="@+string/login_username" >
 
 	            <requestFocus />
 	        </EditText>
@@ -25,7 +32,8 @@
 	            android:id="@+id/et_login_password"
 	            android:layout_width="300dp"
 	            android:layout_height="40dp"
-	            android:hint="密码" />
+	            android:inputType="textPassword" 
+	            android:hint="@+string/login_pwd" />
 
     </LinearLayout>
 
@@ -43,8 +51,9 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/button_back"
-            android:text="注册"
-            android:textColor="#555555" />
+            android:text="@+string/register"
+            android:textColor="#555555" 
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/btn_login"
@@ -52,8 +61,10 @@
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
             android:background="@drawable/button_back3"
-            android:text="登录"
-            android:textColor="#555555" />
+            android:text="@+string/login"
+            android:textColor="#555555" 
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

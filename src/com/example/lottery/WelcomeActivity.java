@@ -1,4 +1,11 @@
+/*
+ * Some rights reserved!
+ * Author : Layone
+ * Mail to superlayone@gmail.com
+ */
 package com.example.lottery;
+
+import java.lang.ref.WeakReference;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,7 +14,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.KeyEvent;
-import android.view.Menu;
 
 public class WelcomeActivity extends Activity {
 
@@ -20,7 +26,7 @@ public class WelcomeActivity extends Activity {
 	boolean isFirstIn = false;  
 	private static final String SHAREDPREFERENCES_NAME = "first_pref";  
 	//Handler
-	private Handler mHandler = new Handler() {  		  
+	private Handler mHandler = new MyHandler(this) {  		  
 	        @Override  
 	        public void handleMessage(Message msg) {  
 	            switch (msg.what) {  
@@ -40,6 +46,23 @@ public class WelcomeActivity extends Activity {
 		setContentView(R.layout.activity_welcome);
 		init();
     }
+	//Using weak reference to avoid leaking occur
+	private static class MyHandler extends Handler{
+	    private final WeakReference<Activity> mActivity;
+	    public MyHandler(Activity activity) {
+	        mActivity = new WeakReference<Activity>(activity);
+	    }
+	    @Override
+	    public void handleMessage(Message msg) {
+	        System.out.println(msg);
+	        if(mActivity.get() == null) {
+	            return;
+	        }
+	    }
+	}
+	/*
+	 * Checkout if first in
+	 */
 	private void init() {  
         SharedPreferences preferences = getSharedPreferences(  
                 SHAREDPREFERENCES_NAME, MODE_PRIVATE);    

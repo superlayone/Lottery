@@ -1,3 +1,8 @@
+/*
+ * Some rights reserved!
+ * Author : Layone
+ * Mail to superlayone@gmail.com
+ */
 package com.example.lottery;
 
 import android.os.Bundle;
@@ -6,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class DetailFragment extends Fragment{
-	public DetailFragment() {
+public class BuyLotteryDetailFragment extends Fragment{
+	public BuyLotteryDetailFragment() {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
@@ -18,7 +23,7 @@ public class DetailFragment extends Fragment{
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {     
-		View view=inflater.inflate(R.layout.fragment_detail, container, false);
+		View view=inflater.inflate(R.layout.fragment_buy_lottery_detail, container, false);
 		return view;
     }
 }
