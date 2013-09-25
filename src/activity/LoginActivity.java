@@ -3,7 +3,9 @@
  * Author : Layone
  * Mail to superlayone@gmail.com
  */
-package com.example.lottery;
+package activity;
+
+import com.example.lottery.R;
 
 import android.os.Bundle;
 import android.app.Activity;

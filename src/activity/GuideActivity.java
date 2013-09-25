@@ -4,9 +4,11 @@
  * Author : Layone
  * Mail to superlayone@gmail.com
  */
-package com.example.lottery;
+package activity;
 
 import java.util.ArrayList;
+
+import com.example.lottery.R;
  
 import android.app.Activity;
 import android.content.Intent;

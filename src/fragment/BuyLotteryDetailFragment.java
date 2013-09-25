@@ -3,7 +3,9 @@
  * Author : Layone
  * Mail to superlayone@gmail.com
  */
-package com.example.lottery;
+package fragment;
+
+import com.example.lottery.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

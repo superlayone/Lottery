@@ -11,7 +11,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
         android:background="@drawable/tabmenu_back"
-        android:text="玩法选择" />
+        android:text="@+string/choose_play" />
 
 	<Button
 	    android:id="@+id/tabbar_menu2"
@@ -21,7 +21,7 @@
 	    android:layout_marginLeft="5dp"
 	    android:layout_toRightOf="@id/tabbar_menu1"
 	    android:background="@drawable/tabmenu_back"
-	    android:text="玩法说明" />
+	    android:text="@+string/play_description" />
 
 	<Button
 	    android:id="@+id/tabbar_menu3"
@@ -31,6 +31,6 @@
 	    android:layout_marginLeft="5dp"
 	    android:layout_toRightOf="@id/tabbar_menu2"
 	    android:background="@drawable/tabmenu_back"
-	    android:text="投注" />
+	    android:text="@+string/cathectic" />
 
 </RelativeLayout>

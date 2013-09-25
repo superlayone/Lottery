@@ -3,9 +3,12 @@
  * Author : Layone
  * Mail to superlayone@gmail.com
  */
-package com.example.lottery;
+package activity;
 
 import java.lang.ref.WeakReference;
+
+import com.example.lottery.R;
+import common.Global;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +16,7 @@ import android.os.Message;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.KeyEvent;
 
 public class WelcomeActivity extends Activity {
@@ -64,6 +68,9 @@ public class WelcomeActivity extends Activity {
 	 * Checkout if first in
 	 */
 	private void init() {  
+		/*
+		 * Fetch SharedPreferences to make a decision
+		 */
         SharedPreferences preferences = getSharedPreferences(  
                 SHAREDPREFERENCES_NAME, MODE_PRIVATE);    
         isFirstIn = preferences.getBoolean("isFirstIn", true);  
@@ -72,7 +79,37 @@ public class WelcomeActivity extends Activity {
         } else {  
         	mHandler.sendEmptyMessageDelayed(goSelect, SPLASH_DELAY_MILLIS); 
         }  
-  
+        /*
+         * Check if global settings stored into SharedPreferences
+         * If NOT_EXIST,put into SharedPreferences
+         * and commit these changes
+         */
+        preferences = getSharedPreferences(Global.GLOBALSETTINGS,MODE_PRIVATE);
+        if(preferences.getString(Global.PREFERENCE_GATEWAY, "none") == "none"){
+        	Editor editor = preferences.edit(); 
+        	editor.putString(Global.PREFERENCE_GATEWAY, Global.defaultGateway); 
+        	editor.commit(); 
+        }
+        if(preferences.getString(Global.PREFERENCE_PLATFORM_IP, "none") == "none"){
+        	Editor editor = preferences.edit(); 
+        	editor.putString(Global.PREFERENCE_PLATFORM_IP, Global.defaultPlatformIP); 
+        	editor.commit(); 
+        }
+        if(preferences.getString(Global.PREFERENCE_PLATFORM_PORT, "none") == "none"){
+        	Editor editor = preferences.edit(); 
+        	editor.putString(Global.PREFERENCE_PLATFORM_PORT, Global.defaultPlatformPort); 
+        	editor.commit(); 
+        }
+        if(preferences.getString(Global.PREFERENCE_SITE_NO, "none") == "none"){
+        	Editor editor = preferences.edit(); 
+        	editor.putString(Global.PREFERENCE_SITE_NO, Global.defaultSiteNo); 
+        	editor.commit(); 
+        }
+        if(preferences.getString(Global.PREFERENCE_TERMINAL_NO, "none") == "none"){
+        	Editor editor = preferences.edit(); 
+        	editor.putString(Global.PREFERENCE_TERMINAL_NO, Global.defaultTerminalNo); 
+        	editor.commit(); 
+        }
     }  
     private void goSelectActivity() {  
     	Intent intent = new Intent();

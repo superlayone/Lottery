@@ -3,7 +3,13 @@
  * Author : Layone
  * Mail to superlayone@gmail.com
  */
-package com.example.lottery;
+package activity;
+
+import com.example.lottery.R;
+
+import fragment.BuyLotteryDetailFragment;
+import fragment.BuyLotteryTabBarFragment;
+import fragment.NaviMenuFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
