@@ -1,6 +1,5 @@
 /*
  * Some rights reserved!
- * Guide page for displaying key features!
  * Author 	: 	Layone
  * Date 	: 	2013-09
  * Mail 	: 	superlayone@gmail.com

@@ -6,6 +6,9 @@
  */
 package activity;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.example.lottery.R;
 import common.Global;
 
@@ -13,6 +16,9 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -44,6 +50,151 @@ public class ChangeSettingActivity extends Activity {
 		etGateway = (EditText)findViewById(R.id.et_gateway);
 		etPlatformIP = (EditText)findViewById(R.id.et_platform_IP);
 		etPlatformPort = (EditText)findViewById(R.id.et_platform_port);
+		/*
+		 * Add listener to detect if the
+		 * input is legal,and high-light
+		 * the EditText to guide user modify 
+		 * the error input
+		 */
+		etTerminalNo.addTextChangedListener(new TextWatcher(){
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				if(hasPreZero(s.toString())){
+					Toast preErr = Toast.makeText(ChangeSettingActivity.this,
+						     "请输入合法的数字，去掉前导0", Toast.LENGTH_SHORT);
+					preErr.setGravity(Gravity.CENTER, 0, 0);
+					preErr.show();
+					etTerminalNo.setTextColor(Color.RED);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				etTerminalNo.setTextColor(Color.BLUE);
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		etSiteNo.addTextChangedListener(new TextWatcher(){
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				if(hasPreZero(s.toString())){
+					Toast preErr = Toast.makeText(ChangeSettingActivity.this,
+						     "请输入合法的数字，去掉前导0", Toast.LENGTH_SHORT);
+					preErr.setGravity(Gravity.CENTER, 0, 0);
+					preErr.show();
+					etSiteNo.setTextColor(Color.RED);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				etSiteNo.setTextColor(Color.BLUE);
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		etGateway.addTextChangedListener(new TextWatcher(){
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				if(isIPAddress(s.toString())){
+					etGateway.setTextColor(Color.BLUE);
+				}else{
+					etGateway.setTextColor(Color.RED);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				// TODO Auto-generated method stub
+			}
+		});
+		etPlatformIP.addTextChangedListener(new TextWatcher(){
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				if(isIPAddress(s.toString())){
+					etPlatformIP.setTextColor(Color.BLUE);
+				}else{
+					etPlatformIP.setTextColor(Color.RED);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		etPlatformPort.addTextChangedListener(new TextWatcher(){
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				if(hasPreZero(s.toString())){
+					Toast preErr = Toast.makeText(ChangeSettingActivity.this,
+						     "请输入合法的数字，去掉前导0", Toast.LENGTH_SHORT);
+					preErr.setGravity(Gravity.CENTER, 0, 0);
+					preErr.show();
+					etPlatformPort.setTextColor(Color.RED);
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				etPlatformPort.setTextColor(Color.BLUE);
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 		btnChangeDone.setOnClickListener(new Button.OnClickListener(){
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -117,11 +268,26 @@ public class ChangeSettingActivity extends Activity {
 		});
 	}
 	/*
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.change_setting, menu);
+	 * Verify if the input gateway and IP area has legal
+	 * IP address input
+	 */
+	public static boolean isIPAddress(String ip){
+		Pattern p= Pattern.compile("([0-9]|[0-9]\\d|1\\d{2}|2[0-1]\\d|25[0-5])(\\.(\\d|[0-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}");   
+		Matcher m = p.matcher(ip);   
+		boolean match = m.matches();   
+		if(!match){ 
+		   return false; 
+		}
 		return true;
 	}
+	/*
+	 * Verify if the input string has a prefix-zero
+	 * in the condition of length >= 2
 	 */
+	public static boolean hasPreZero(String num){
+		if(num.length()>=2 && num.charAt(0)=='0'){
+			return true;
+		}
+		return false;
+	}
 }
