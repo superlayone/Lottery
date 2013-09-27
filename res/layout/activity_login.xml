@@ -8,8 +8,8 @@
 	    android:layout_height="320dp"
 	    android:layout_centerHorizontal="true"
 	    android:layout_centerVertical="false"
-	    android:layout_marginTop="300dp"
-	    android:background="@drawable/login_frame2" >
+	    android:layout_marginTop="230dp"
+	    android:background="@drawable/push_down" >
 
         <LinearLayout
             android:id="@+id/ll_input"
@@ -27,7 +27,7 @@
 
 	            <requestFocus />
 	        </EditText>
-	
+
 	        <EditText
 	            android:id="@+id/et_login_password"
 	            android:layout_width="300dp"
@@ -51,7 +51,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/button_back"
-            android:text="@+string/register"
+            android:text="@+string/reg"
             android:textColor="#555555" 
             style="?android:attr/buttonBarButtonStyle" />
 

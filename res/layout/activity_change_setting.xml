@@ -3,12 +3,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/detail_background" >
 
+	<RelativeLayout
+	    android:layout_width="450dp"
+	    android:layout_height="420dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="150dp"
+	    android:background="@drawable/push_down_wide" >
+
     <LinearLayout
         android:id="@+id/ll_change_setting"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="70dp"
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
@@ -50,7 +57,7 @@
         android:layout_height="70dp"
         android:layout_below="@+id/ll_change_setting"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:paddingTop="20dp" >
 
         <Button
@@ -71,4 +78,5 @@
             android:textColor="#555555" 
             style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

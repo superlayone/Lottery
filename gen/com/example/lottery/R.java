@@ -47,20 +47,22 @@ public final class R {
         public static final int navi=0x7f020017;
         public static final int navi_button_back_selector=0x7f020018;
         public static final int navi_button_selector=0x7f020019;
-        public static final int radio_style1=0x7f02001a;
-        public static final int radio_style2=0x7f02001b;
-        public static final int select=0x7f02001c;
-        public static final int tab_button_back_selector=0x7f02001d;
-        public static final int tab_button_selector=0x7f02001e;
-        public static final int tab_normal=0x7f02001f;
-        public static final int tab_pressed=0x7f020020;
-        public static final int tabbar=0x7f020021;
-        public static final int tabmenu_back=0x7f020022;
-        public static final int view_page_back1=0x7f020023;
-        public static final int view_page_back2=0x7f020024;
-        public static final int view_page_back3=0x7f020025;
-        public static final int view_page_back4=0x7f020026;
-        public static final int welcome=0x7f020027;
+        public static final int push_down=0x7f02001a;
+        public static final int push_down_wide=0x7f02001b;
+        public static final int radio_style1=0x7f02001c;
+        public static final int radio_style2=0x7f02001d;
+        public static final int select=0x7f02001e;
+        public static final int tab_button_back_selector=0x7f02001f;
+        public static final int tab_button_selector=0x7f020020;
+        public static final int tab_normal=0x7f020021;
+        public static final int tab_pressed=0x7f020022;
+        public static final int tabbar=0x7f020023;
+        public static final int tabmenu_back=0x7f020024;
+        public static final int view_page_back1=0x7f020025;
+        public static final int view_page_back2=0x7f020026;
+        public static final int view_page_back3=0x7f020027;
+        public static final int view_page_back4=0x7f020028;
+        public static final int welcome=0x7f020029;
     }
     public static final class id {
         public static final int action_settings=0x7f08002c;
@@ -161,7 +163,7 @@ public final class R {
         public static final int platform_IP=0x7f05001a;
         public static final int platform_port=0x7f05001b;
         public static final int play_description=0x7f050014;
-        public static final int register=0x7f05000a;
+        public static final int reg=0x7f05000a;
         public static final int release_winning_info=0x7f050011;
         public static final int reserved1=0x7f05000d;
         public static final int reserved2=0x7f05000e;
