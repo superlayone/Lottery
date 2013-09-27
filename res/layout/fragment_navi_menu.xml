@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/navi"
-    android:orientation="vertical" >
+    android:layout_height="fill_parent">
 
-    <Button
-        android:id="@+id/btn_navi_1"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
+    <ImageView
+        android:id="@+id/iv_main_logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/navi_back1"
-        android:paddingTop="0dp"
-        android:text="@+string/lottery_info"
-        android:textColor="#555555" />
+        android:contentDescription="@+string/mainpage_logo_desc"/>
 
-    <Button
-        android:id="@+id/btn_navi_2"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_below="@+id/btn_navi_1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/navi_back2"
-        android:text="@+string/buy_lottery"
-        android:textColor="#555555" />
+	<RadioGroup
+	    android:id="@+id/rg_navi_menu"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/iv_main_logo">
 
-    <Button
-        android:id="@+id/btn_navi_3"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_below="@+id/btn_navi_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/navi_back3"
-        android:text="@+string/release_winning_info"
-        android:textColor="#555555" />
+	        <RadioButton
+	            android:id="@+id/rb_navi_lottery_info"
+	            android:layout_width="match_parent"
+	            android:layout_height="100dp"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/navi_button_back_selector"
+	            android:button="@drawable/navi_button_selector"
+	            android:checked="true" />
 
-    <Button
-        android:id="@+id/btn_navi_4"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_below="@+id/btn_navi_3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/navi_back4"
-        android:text="@+string/my_lottery"
-        android:textColor="#555555" />
-
+	        <RadioButton 
+	            android:id="@+id/rb_navi_buy_lottery"
+	            android:layout_width="match_parent" 
+	        	android:layout_height="100dp"
+	        	android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+	        	android:background="@drawable/navi_button_back_selector"
+	            android:button="@drawable/navi_button_selector"/>
+	        <RadioButton 
+	            android:id="@+id/rb_navi_release_winning_info"
+	            android:layout_width="match_parent" 
+	        	android:layout_height="100dp"
+	        	android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+	        	android:background="@drawable/navi_button_back_selector"
+	            android:button="@drawable/navi_button_selector"/>
+	        <RadioButton 
+	            android:id="@+id/rb_navi_my_lottery"
+	            android:layout_width="match_parent" 
+	        	android:layout_height="100dp"
+	        	android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+	        	android:background="@drawable/navi_button_back_selector"
+	            android:button="@drawable/navi_button_selector"/>
+	</RadioGroup>  
 </RelativeLayout>

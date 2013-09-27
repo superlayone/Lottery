@@ -7,11 +7,9 @@
 package activity;
 
 import com.example.lottery.R;
-
-import fragment.BuyLotteryDetailFragment;
-import fragment.BuyLotteryTabBarFragment;
+import fragment.LotteryInfoDetailFragment;
+import fragment.LotteryInfoTabBarFragment;
 import fragment.NaviMenuFragment;
-
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -22,7 +20,7 @@ public class MainActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		 // Check that the activity is using the layout version with  
+		// Check that the activity is using the layout version with  
         // the fragment_container FrameLayout  
         if (findViewById(R.id.naviMenu) != null &&
         		findViewById(R.id.tabBar) != null &&
@@ -35,16 +33,15 @@ public class MainActivity extends FragmentActivity {
             }  
 			//Create an instance of xxFragment
 			NaviMenuFragment naviMenuFragment = new NaviMenuFragment();
-			BuyLotteryTabBarFragment tabBarFragment = new BuyLotteryTabBarFragment();
-			BuyLotteryDetailFragment detailFragment = new BuyLotteryDetailFragment();
+			LotteryInfoTabBarFragment tabBarFragment = new LotteryInfoTabBarFragment();
+			LotteryInfoDetailFragment detailFragment = new LotteryInfoDetailFragment();
 			// In case this activity was started with special instructions from an Intent,  
 	        // pass the Intent's extras to the fragment as arguments 
 			naviMenuFragment.setArguments(getIntent().getExtras());  
-	        
 	        // Add the fragment to the 'fragment_container' FrameLayout  
 	        getSupportFragmentManager().beginTransaction()  
 	                .add(R.id.naviMenu, naviMenuFragment).commit(); 
-	        
+	        //Do also
 	        tabBarFragment.setArguments(getIntent().getExtras());  
 	        getSupportFragmentManager().beginTransaction()  
 	                .add(R.id.tabBar, tabBarFragment).commit(); 

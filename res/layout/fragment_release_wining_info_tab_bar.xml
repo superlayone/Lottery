@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rg_buy_lottery_tab"
+    android:id="@+id/rg_release_wining_info_tab"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="horizontal" >
 	<RadioButton
-	     android:id="@+id/rb_buy_lottery_tab_1"
+	     android:id="@+id/rb_release_wining_info_tab1"
 	     android:layout_width="100dp"
 	     android:layout_height="70dp"
 	     android:layout_marginLeft="10dp"
@@ -13,12 +13,4 @@
 	     android:background="@drawable/tab_button_back_selector"
 	     android:button="@drawable/tab_button_selector"
 	     android:checked="true" />
-	<RadioButton
-	     android:id="@+id/rb_buy_lottery_tab_2"
-	     android:layout_width="100dp"
-	     android:layout_height="70dp"
-	     android:layout_marginLeft="10dp"
-	     android:layout_marginRight="10dp"
-	     android:background="@drawable/tab_button_back_selector"
-	     android:button="@drawable/tab_button_selector"/>
 </RadioGroup>  

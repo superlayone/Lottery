@@ -1,46 +1,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/detail_background2"
-    android:paddingTop="?android:attr/actionBarSize"
-    android:baselineAligned="false" >
+    android:background="@drawable/detail_background"
+    android:baselineAligned="false"
+    android:paddingTop="?android:attr/actionBarSize" >
 
     <FrameLayout
         android:id="@+id/naviMenu"
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
         android:layout_weight="1" >
-
     </FrameLayout>
     <LinearLayout 
         android:id="@+id/details"
-        android:layout_weight="5" 
+        android:layout_weight="6" 
         android:layout_width="0px" 
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
         <FrameLayout 
 	        android:id="@+id/tabBar" 
 	        android:layout_width="match_parent"
-	        android:layout_height="100dp" 
-	        android:layout_marginBottom="5dp"
-	        android:layout_marginLeft="5dp"
-	        android:layout_marginRight="5dp"
-	        android:layout_marginTop="5dp">
+	        android:layout_height="70dp" >
     	</FrameLayout>
     	<FrameLayout 
 	        android:id="@+id/detailArea"
 	        android:layout_width="match_parent"
-	        android:layout_height="match_parent" 
-	        android:layout_marginBottom="5dp"
-	        android:layout_marginLeft="5dp"
-	        android:layout_marginRight="5dp"
-	        android:layout_marginTop="5dp"
-	        >
+	        android:layout_height="match_parent">
     	</FrameLayout>
     </LinearLayout>
 </LinearLayout>

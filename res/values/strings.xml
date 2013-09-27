@@ -31,4 +31,5 @@
 	<string name="platform_port">平台端口</string>
 	<string name="change_cancel">取消</string>
 	<string name="change_done">确定</string>
+	<string name="mainpage_logo_desc">LOGO</string>
 </resources>
