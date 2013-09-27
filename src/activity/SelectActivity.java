@@ -24,7 +24,7 @@ public class SelectActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select);
 		gd=new GestureDetector(this,new OnDoubleClick());
-		btnSelect = (Button)findViewById(R.id.elenven_choose_five);
+		btnSelect = (Button)findViewById(R.id.eleven_choose_five);
 		btnSelect.setOnClickListener(new Button.OnClickListener(){
 
 			

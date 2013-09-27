@@ -6,11 +6,12 @@ All rights reserved! **Layone**  and  **FZ1989** 2013!
 #Functions
 
 - Lottery games
-- Choose 5 in 11
+- Choose 5 in 11(Main)
 - Implement key features
-- Master-flow
+- Master-Detail flow architecture
 - Visual effect
 - Commercial Apps guarantee
+- Animation and UX
 
 # Definitions
 
